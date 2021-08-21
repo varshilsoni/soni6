@@ -1,0 +1,38 @@
+USE [inqubyte]
+GO
+
+CREATE TABLE [dbo].[patientinfo](
+	[CustomerName] [varchar](255) NOT NULL primary key,
+	[Customer_Id] [varchar](18) NOT NULL,
+	[Customer_Open_date] [date] NOT NULL,
+	[Last_Consulted] [date] NULL,
+	[Vaccination_Type] [char](5) NULL,
+	[Doctor_Consulted] [char](255) NULL,
+	[State] [char](15) NULL,
+	[Country] [char](10) NULL,
+	[Post_Code] [nvarchar](5) NULL,
+	[Date_Of_Birth] [date] NULL,
+	[Active_Customer] [char](1) NULL,
+
+)
+GO
+
+--select(display) script 
+ 
+USE [inqubyte]
+GO
+
+SELECT [Customer_Name]
+      ,[Customer_Id]
+      ,[Customer_Open_date]
+      ,[Last_Consulted_Date]
+      ,[Vaccination_Type]
+      ,[Doctor_Consulted]
+      ,[State]
+      ,[Country]
+      ,[Post_Code]
+      ,[Date_Of_Birth]
+      ,[Active_Customer]
+  FROM [dbo].[patientinfo]
+
+GO

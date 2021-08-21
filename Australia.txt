@@ -1,0 +1,42 @@
+--Australia create table script 
+USE [inqubyte]
+GO
+
+CREATE TABLE [dbo].[Australia](
+	[Customer_Name] [nvarchar](50) NOT NULL,
+	[Customer_Id] [int] NOT NULL,
+	[Customer_Open_date] [int] NOT NULL,
+	[Last_Consulted_Date] [int] NULL,
+	[Vaccination_Type] [nvarchar](50) NULL,
+	[Doctor_Consulted] [nvarchar](50) NULL,
+	[State] [nvarchar](50) NULL,
+	[Country] [nvarchar](50) NULL,
+	[Post_Code] [nvarchar](50) NULL,
+	[Date_Of_Birth] [int] NULL,
+	[Active_Customer] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+
+--select(display) script 
+ 
+USE [inqubyte]
+GO
+
+SELECT [Customer_Name]
+      ,[Customer_Id]
+      ,[Customer_Open_date]
+      ,[Last_Consulted_Date]
+      ,[Vaccination_Type]
+      ,[Doctor_Consulted]
+      ,[State]
+      ,[Country]
+      ,[Post_Code]
+      ,[Date_Of_Birth]
+      ,[Active_Customer]
+  FROM [dbo].[Australia]
+
+GO
+
+--insert by query
+SELECT * INTO Australia FROM patientinfo where Country='Australia'
+
